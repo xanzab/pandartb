@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  position: relative;
+  min-height: 400px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-bottom: 24px; 
+}
+
+.cardWrapper {
+  flex: 1 1 auto; 
+  min-width: 280px;
+  max-width: 400px; 
+  margin-right: auto;
+}
+
+.loadingRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1200px) {
+  .cardWrapper {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    gap: 16px;
+    padding: 0 16px 16px;
+  }
+  
+  .cardWrapper {
+    min-width: 250px;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    gap: 12px;
+    padding: 0 12px 12px;
+    justify-content: center;
+  }
+  
+  .cardWrapper {
+    min-width: 280px;
+    max-width: 100%;
+    width: 100%;
+  }
+}

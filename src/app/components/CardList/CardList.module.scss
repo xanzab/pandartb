@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  
+  :global(.ant-pagination) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.loadingMore {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.endMessage {
+  margin: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+  }
+  
+  .pagination {
+    padding: 16px 8px;
+    
+    :global(.ant-pagination) {
+      font-size: 14px;
+      
+      .ant-pagination-item,
+      .ant-pagination-prev,
+      .ant-pagination-next {
+        min-width: 32px;
+        height: 32px;
+        line-height: 30px;
+        margin: 0 2px;
+      }
+      
+      .ant-pagination-jump-prev,
+      .ant-pagination-jump-next {
+        margin: 0 2px;
+      }
+    }
+  }
+  
+  .loadingMore {
+    padding: 16px;
+  }
+  
+  .endMessage {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .pagination {
+    padding: 12px 4px;
+    
+    :global(.ant-pagination) {
+      font-size: 12px;
+      
+      .ant-pagination-item,
+      .ant-pagination-prev,
+      .ant-pagination-next {
+        min-width: 28px;
+        height: 28px;
+        line-height: 26px;
+        margin: 0 1px;
+        font-size: 12px;
+      }
+      
+      .ant-pagination-total-text {
+        display: none; /* Скрываем текст "из X элементов" на очень маленьких экранах */
+      }
+      
+      .ant-pagination-options {
+        display: none; /* Скрываем быстрый переход на маленьких экранах */
+      }
+    }
+  }
+  
+  .loadingMore {
+    padding: 12px;
+  }
+  
+  .endMessage {
+    margin: 12px;
+  }
+}
